@@ -12,5 +12,15 @@
  */
 
 return [
-    // ...
+    'db' => array(
+        'driver' => 'Pdo',
+        'dsn' => 'mysql:dbname=zf3_crud;host=localhost',
+        'username' => 'root',
+        'password' => '',
+    ),
+   // 'service_manager' => array(
+   //     'factories' => array(
+   //         'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+   //     ),
+   // )
 ];

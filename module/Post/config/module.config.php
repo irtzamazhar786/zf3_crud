@@ -38,7 +38,11 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            // Controller\IndexController::class => function($container) {
+            //     return new Controller\IndexController(
+            //         $container->get(Model\PostTable::class)
+            //     );
+            // },
         ],
     ],
     'view_manager' => [

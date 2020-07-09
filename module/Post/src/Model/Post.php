@@ -9,6 +9,13 @@ class Post
 	protected $description;
 	protected $category;
 
+	public function exchangeArray($data){
+		$this->id = $data['id'];
+		$this->title = $data['title'];
+		$this->description = $data['description'];
+		$this->category = $data['category'];
+	}
+
 	public function getId(){
 		return $this->id;
 	}

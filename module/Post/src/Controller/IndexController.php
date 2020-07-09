@@ -12,8 +12,14 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    protected $table;
+
+    public function __construct($table){
+        $this->table = $table;
+    }
     public function indexAction()
     {
-        return new ViewModel();
+        $posts = $this->table->fetchAll();
+        return new ViewModel(['posts' => $posts]);
     }
 }
